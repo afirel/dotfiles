@@ -1,0 +1,46 @@
+[core]
+  editor = vim
+  excludesfile = ~/.gitignore
+
+[include]
+  path = ~/.gitidentity
+
+[apply]
+  whitespace = fix
+
+[merge]
+  log = true
+
+[alias]
+  c = commit
+  am = commit --amend
+  aa = add .
+  st = status
+  s = status
+  f = fetch --all
+  p = pull --rebase
+  b = branch
+  bv = branch -v
+  cob = checkout -b
+  co = checkout
+  l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+  lg = log --graph
+  ld = log -p
+  ly = log --since='2 days ago'
+  lgy = log -p --since='2 days ago'
+  d = diff
+  dc = diff --cached
+  who = shortlog -s --
+  merge = merge --nocommit
+  undocommit = reset --soft HEAD^
+  undomerge-or-pull = reset --hard
+  whats-in-the-stash = stash show -p
+  changelog = "whatchanged --stat --pretty=oneline --abbrev-commit --since=$1"
+
+[color]
+  ui = auto
+  interactive = true
+  status = true
+  branch = true
+  diff = true
+
