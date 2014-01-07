@@ -60,3 +60,13 @@ fi
 source ~/.rvm/scripts/rvm
 
 plugins=(git ruby pass)
+
+# globbing with rsync/scp (not for remote locations)
+autoload -U url-quote-magic
+zle -N self-insert url-quote-magic
+
+# sort it out for SCP
+some_remote_commands=(scp rsync)
+zstyle -e :urlglobber url-other-schema \
+  '[[ $some_remote_commands[(i)$words[1]] -le ${#some_remote_commands} ]] && reply=("*") || reply=(http https ftp)'
+
