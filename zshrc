@@ -5,8 +5,8 @@ export ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-#ZSH_THEME="robbyrussell"
-ZSH_THEME="messias"
+#ZSH_THEME="messias"
+ZSH_THEME='clean'
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -77,7 +77,6 @@ export EDITOR=vim
 if [ -d "$HOME/bin" ] ; then
   PATH="$HOME/bin:$PATH"
 fi
-source ~/.rvm/scripts/rvm
 
 plugins=(git ruby pass)
 
