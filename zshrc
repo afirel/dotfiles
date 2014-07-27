@@ -75,7 +75,7 @@ bindkey "^[[1;3D" backward-word
 export EDITOR=vim
 
 if [ -d "$HOME/bin" ] ; then
-  PATH="$HOME/bin:$PATH"
+  export PATH="$PATH:$HOME/bin"
 fi
 
 plugins=(git ruby pass)
