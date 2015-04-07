@@ -1,0 +1,13 @@
+vmap R :!psql -e<enter>
+
+:nmap ; :CtrlPBuffer<CR>
+
+" modules:
+" git://github.com/altercation/vim-colors-solarized.git
+" https://github.com/godlygeek/tabular.git
+
+syntax enable
+let g:solarized_termtrans=1
+
+set background=dark
+colorscheme solarized
