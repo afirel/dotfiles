@@ -13,12 +13,14 @@
 
 [alias]
   c = commit
+  cf = commit --fixup
   ca = !git add -A && git commit
-  am = commit --amend
+  cm = commit --amend
   aa = add -A .
   save = !git add -A && git commit -m 'SAVEPOINT'
   wip = !git add -u && git commit -m "WIP"
   wipe = !git add -A && git commit -qm 'WIPE SAVEPOINT' && git reset HEAD~1 --hard
+  r = rebase -i
   s = status
   f = fetch --all
   p = pull --rebase
@@ -49,3 +51,5 @@
 
 [push]
 	default = simple
+[rebase]
+	autosquash = true
