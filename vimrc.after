@@ -2,6 +2,7 @@
 " git://github.com/altercation/vim-colors-solarized.git
 " https://github.com/godlygeek/tabular.git
 " https://github.com/terryma/vim-expand-region
+" https://github.com/Valloric/YouCompleteMe.git
 
 let mapleader = "\<Space>"
 
