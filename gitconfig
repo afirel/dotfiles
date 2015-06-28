@@ -23,7 +23,8 @@
   r = rebase -i
   s = status
   f = fetch --all
-  p = pull --rebase
+  p = push
+  pf = push --force
   b = branch
   bv = branch -v
   cob = checkout -b
