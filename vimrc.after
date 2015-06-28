@@ -1,10 +1,24 @@
-vmap R :!psql -e<enter>
-
-:nmap ; :CtrlPBuffer<CR>
-
 " modules:
 " git://github.com/altercation/vim-colors-solarized.git
 " https://github.com/godlygeek/tabular.git
+" https://github.com/terryma/vim-expand-region
+
+let mapleader = "\<Space>"
+
+vmap R :!psql -e<enter>
+
+nnoremap <Leader>o :CtrlP<CR>
+nnoremap <Leader>w :w<CR>
+:nmap ; :CtrlPBuffer<CR>
+
+" Use v to expand region, <C-v> to shrink
+vmap v <Plug>(expand_region_expand)
+vmap <C-v> <Plug>(expand_region_shrink)
+
+" jump to end of pasted text
+vnoremap <silent> y y`]
+vnoremap <silent> p p`]
+nnoremap <silent> p p`]
 
 syntax enable
 let g:solarized_termtrans=1
