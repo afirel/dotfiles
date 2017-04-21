@@ -69,7 +69,7 @@
 
 ;; This seems like a good basic set of keywords to start out with:
 
-(setq org-todo-keywords '((type "TODO" "NEXT" "INPROGRESS" "WAITING" "DONE")))
+(setq org-todo-keywords '((type "TODO" "NEXT" "INPROGRESS" "WAITING" "REVIEW" "RELEASE" "DONE")))
 
 ;; Some projects need their own org files, but I still want them to
 ;; show up in my agenda.
@@ -115,6 +115,8 @@
 (setf org-todo-keyword-faces '(("NEXT" . (:foreground "darkblue" :bold t :weight bold))
 			       ("TODO" . (:foreground "black" :bold t :weight bold))
 			       ("WAITING" . (:foreground "darkred" :bold t :weight bold))
+			       ("RELEASE" . (:foreground "darkgreen" :bold t :weight bold))
+			       ("RELEASE" . (:foreground "orange" :bold t :weight bold))
 			       ("INPROGRESS" . (:foreground "darkgreen" :bold t :weight bold))
 			       ("DONE" . (:foreground "gray50" :background "gray30"))))
 

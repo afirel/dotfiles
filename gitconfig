@@ -2,6 +2,9 @@
   editor = vim
   excludesfile = ~/.gitignore
 
+[diff]
+  tool = vim.diff
+
 [include]
   path = ~/.gitidentity
 

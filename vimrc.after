@@ -3,6 +3,8 @@
 " https://github.com/godlygeek/tabular.git
 " https://github.com/terryma/vim-expand-region
 " https://github.com/Valloric/YouCompleteMe.git
+" https://github.com/fatih/vim-go.git
+" https://github.com/majutsushi/tagbar
 
 let mapleader = "\<Space>"
 
@@ -26,3 +28,5 @@ let g:solarized_termtrans=1
 
 set background=dark
 colorscheme solarized
+
+nmap <F8> :TagbarToggle<CR>
