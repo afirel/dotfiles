@@ -3,6 +3,7 @@
 
 install:
 	ln -fs ${PWD}/gitconfig ~/.gitconfig
+	ln -fs ${PWD}/gitattributes ~/.gitattributes
 	ln -fs ${PWD}/tmux.conf ~/.tmux.conf
 	ln -fs ${PWD}/zshrc ~/.zshrc
 	mkdir -p ~/.ssh
