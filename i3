@@ -166,7 +166,6 @@ bindsym ISO_Next_Group exec pkill -RTMIN+1 i3blocks
 workspace 1 output DisplayPort-1
 workspace 2 output DisplayPort-0
 workspace 3 output DisplayPort-2
-workspace 4 output DisplayPort-3
 
 exec --no-startup-id '/home/abrandl/.screenlayout/quadhead-standing-desk.sh'
 exec --no-startup-id nm-applet
@@ -177,9 +176,9 @@ exec --no-startup-id xsetroot -solid "#000000"
 # localectl list-x11-keymap-options | grep grp:
 exec --no-startup-id "setxkbmap -model pc105 -layout de,us -option grp:alt_space_toggle"
 
-exec --no-startup-id i3-msg 'workspace 2; exec /usr/bin/firefox'
+exec --no-startup-id i3-msg 'workspace 1; exec /usr/bin/firefox'
 exec --no-startup-id i3-msg 'workspace 3; exec /usr/bin/slack'
-exec --no-startup-id i3-msg 'workspace 4; exec /usr/bin/spotify'
+exec --no-startup-id i3-msg 'workspace 3; exec /usr/bin/spotify'
 
 bindsym $mod+Shift+n exec "nautilus"
 bindsym $mod+Print exec "gnome-screenshot -i"
@@ -189,7 +188,7 @@ bindsym $mod+Control+l exec "i3lock -c 000000"
 
 assign [class="Slack"] 3
 assign [class="Firefox"] 1
-assign [class="Spotify"] 4
+assign [class="Spotify"] 3
 
 # To open Ubunty's Settings:
 # unity-control-center
