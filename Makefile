@@ -8,6 +8,8 @@ install:
 	ln -fs ${PWD}/zshrc ~/.zshrc
 	mkdir -p ~/.ssh
 	ln -fs ${PWD}/ssh/rc ~/.ssh/rc
+	mkdir -p ~/.config/i3
+	ln -fs ${PWD}/i3 ~/.config/i3/config
 
 uninstall:
 	@echo "Cleaning up dotfiles"
@@ -15,4 +17,5 @@ uninstall:
 	rm -f ~/.tmux.conf
 	rm -f ~/.zshrc
 	rm -f ~/.ssh/rc
+	rm -f ~/.config/i3/config
 
