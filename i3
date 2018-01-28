@@ -182,9 +182,29 @@ exec --no-startup-id i3-msg 'workspace 3; exec /usr/bin/spotify'
 
 bindsym $mod+Shift+n exec "nautilus"
 bindsym $mod+Print exec "gnome-screenshot -i"
-bindsym $mod+Shift+s exec "i3lock -c 000000; dm-tool switch-to-greeter"
 
-bindsym $mod+Control+l exec "i3lock -c 000000"
+# Locking
+set $Locker i3lock -f -c 000000
+exec --no-startup-id xautolock -time 4 -locker "$Locker"
+bindsym $mod+Shift+s exec "$Locker; dm-tool switch-to-greeter"
+bindsym $mod+Control+l exec $Locker
+
+# System control
+set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
+mode "$mode_system" {
+    bindsym l exec --no-startup-id $Locker, mode "default"
+    bindsym e exec --no-startup-id i3-msg exit, mode "default"
+    bindsym s exec --no-startup-id $Locker && systemctl suspend, mode "default"
+    bindsym h exec --no-startup-id $Locker && systemctl hibernate, mode "default"
+    bindsym r exec --no-startup-id systemctl reboot, mode "default"
+    bindsym Shift+s exec --no-startup-id  systemctl poweroff -i, mode "default"
+
+    # back to normal: Enter or Escape
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+
+bindsym $mod+Delete mode "$mode_system"
 
 # Brightness control
 bindsym XF86MonBrightnessUp exec --no-startup-id /usr/bin/backlight-brightness +50
