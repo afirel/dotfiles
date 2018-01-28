@@ -186,6 +186,10 @@ bindsym $mod+Shift+s exec "i3lock -c 000000; dm-tool switch-to-greeter"
 
 bindsym $mod+Control+l exec "i3lock -c 000000"
 
+# Brightness control
+bindsym XF86MonBrightnessUp exec --no-startup-id /usr/bin/backlight-brightness +50
+bindsym XF86MonBrightnessDown exec --no-startup-id /usr/bin/backlight-brightness -50
+
 assign [class="Slack"] 3
 assign [class="Firefox"] 1
 assign [class="Spotify"] 3
