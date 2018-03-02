@@ -15,6 +15,8 @@ ZSH_THEME='clean'
 alias tma="tmux attach -d -t"
 alias tmn="tmux new -s $(basename $(pwd))"
 
+alias glce="cd ~/workspace/gitlab-org/gdk-ce/gitlab; tmux"
+
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
 
@@ -77,6 +79,8 @@ export EDITOR=vim
 if [ -d "$HOME/bin" ] ; then
   export PATH="$PATH:$HOME/bin"
 fi
+
+export PATH=$PATH:/usr/local/go/bin
 
 plugins=(git ruby pass)
 
