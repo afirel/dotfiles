@@ -45,6 +45,8 @@
   undomerge-or-pull = reset --hard
   whats-in-the-stash = stash show -p
   changelog = "whatchanged --stat --pretty=oneline --abbrev-commit --since=$1"
+  cp = cherry-pick
+  specs = !git diff master... --name-only | egrep "spec.*spec.rb" | xargs spring rspec
 
 [color]
   ui = auto

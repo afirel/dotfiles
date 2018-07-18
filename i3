@@ -167,7 +167,7 @@ workspace 1 output DisplayPort-1
 workspace 2 output DisplayPort-0
 workspace 3 output DisplayPort-2
 
-exec --no-startup-id '/home/abrandl/.screenlayout/quadhead-standing-desk.sh'
+exec --no-startup-id '/home/abrandl-gl/.screenlayout/quadhead-standing-desk.sh'
 exec --no-startup-id nm-applet
 exec --no-startup-id 'xset dpms 120'
 exec --no-startup-id 'xmodmap -e "pointer = 3 2 1"'
@@ -185,7 +185,7 @@ bindsym $mod+Print exec "gnome-screenshot -i"
 
 # Locking
 set $Locker i3lock -f -c 000000
-exec --no-startup-id xautolock -time 4 -locker "$Locker"
+exec --no-startup-id xautolock -time 15 -locker "$Locker"
 bindsym $mod+Shift+s exec "$Locker; dm-tool switch-to-greeter"
 bindsym $mod+Control+l exec $Locker
 

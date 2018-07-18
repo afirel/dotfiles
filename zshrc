@@ -16,6 +16,7 @@ alias tma="tmux attach -d -t"
 alias tmn="tmux new -s $(basename $(pwd))"
 
 alias glce="cd ~/workspace/gitlab-org/gdk-ce/gitlab; tmux"
+alias glee="cd ~/workspace/gitlab-org/gdk-ee/gitlab; tmux"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
